@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "CapaNegocio\CapaNegocio.csproj", "{C43F750D-EE3D-412D-8078-5957B94FDF6D}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ServicePasarela", "http://localhost:7853", "{2ACA8415-B75E-4186-85FF-2902A5449937}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_7853"
+		Debug.AspNetCompiler.PhysicalPath = "ServicePasarela\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7853\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_7853"
+		Release.AspNetCompiler.PhysicalPath = "ServicePasarela\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7853\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "ServicePasarela\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C43F750D-EE3D-412D-8078-5957B94FDF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C43F750D-EE3D-412D-8078-5957B94FDF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C43F750D-EE3D-412D-8078-5957B94FDF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C43F750D-EE3D-412D-8078-5957B94FDF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ACA8415-B75E-4186-85FF-2902A5449937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ACA8415-B75E-4186-85FF-2902A5449937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ACA8415-B75E-4186-85FF-2902A5449937}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ACA8415-B75E-4186-85FF-2902A5449937}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
