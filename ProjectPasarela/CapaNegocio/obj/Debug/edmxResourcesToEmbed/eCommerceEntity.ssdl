@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDEcommerceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TClientePasarela">
+    <Key>
+      <PropertyRef Name="CodCliente" />
+    </Key>
+    <Property Name="CodCliente" Type="int" Nullable="false" />
+    <Property Name="Nombres" Type="varchar" MaxLength="30" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="50" />
+    <Property Name="Cuidad" Type="varchar" MaxLength="20" />
+    <Property Name="Provincia" Type="varchar" MaxLength="20" />
+    <Property Name="Distrito" Type="varchar" MaxLength="20" />
+    <Property Name="Sexo" Type="varchar" MaxLength="10" />
+    <Property Name="Estado" Type="varchar" MaxLength="20" />
+    <Property Name="TipoDocumento" Type="varchar" MaxLength="10" />
+    <Property Name="DNI" Type="char" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="TCuentaAhorroPasarela">
+    <Key>
+      <PropertyRef Name="NroCuenta" />
+    </Key>
+    <Property Name="NroCuenta" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="TipoDeCuenta" Type="varchar" MaxLength="40" />
+    <Property Name="Banco" Type="varchar" MaxLength="40" />
+    <Property Name="CodCliente" Type="int" />
+  </EntityType>
+  <EntityType Name="TMovimientoPasarela">
+    <Key>
+      <PropertyRef Name="RegistroMovimiento" />
+    </Key>
+    <Property Name="RegistroMovimiento" Type="int" Nullable="false" />
+    <Property Name="FechaMovimiento" Type="datetime" />
+    <Property Name="MontoRetiro" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="SaldoDisponible" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="NroTarjeta" Type="varchar" MaxLength="16" />
+    <Property Name="Activo" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="TTarjetaPasarela">
+    <Key>
+      <PropertyRef Name="NroTarjeta" />
+    </Key>
+    <Property Name="NroTarjeta" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="TipoTarjeta" Type="varchar" MaxLength="40" />
+    <Property Name="Contrasena" Type="char" MaxLength="40" />
+    <Property Name="NroCuenta" Type="varchar" MaxLength="16" />
+  </EntityType>
+  <Association Name="FK__TCuentaAh__CodCl__2C3393D0">
+    <End Role="TClientePasarela" Type="Self.TClientePasarela" Multiplicity="0..1" />
+    <End Role="TCuentaAhorroPasarela" Type="Self.TCuentaAhorroPasarela" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TClientePasarela">
+        <PropertyRef Name="CodCliente" />
+      </Principal>
+      <Dependent Role="TCuentaAhorroPasarela">
+        <PropertyRef Name="CodCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TMovimien__NroTa__76969D2E">
+    <End Role="TTarjetaPasarela" Type="Self.TTarjetaPasarela" Multiplicity="0..1" />
+    <End Role="TMovimientoPasarela" Type="Self.TMovimientoPasarela" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TTarjetaPasarela">
+        <PropertyRef Name="NroTarjeta" />
+      </Principal>
+      <Dependent Role="TMovimientoPasarela">
+        <PropertyRef Name="NroTarjeta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TTarjetaP__NroCu__2F10007B">
+    <End Role="TCuentaAhorroPasarela" Type="Self.TCuentaAhorroPasarela" Multiplicity="0..1" />
+    <End Role="TTarjetaPasarela" Type="Self.TTarjetaPasarela" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TCuentaAhorroPasarela">
+        <PropertyRef Name="NroCuenta" />
+      </Principal>
+      <Dependent Role="TTarjetaPasarela">
+        <PropertyRef Name="NroCuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BDEcommerceModelStoreContainer">
+    <EntitySet Name="TClientePasarela" EntityType="Self.TClientePasarela" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TCuentaAhorroPasarela" EntityType="Self.TCuentaAhorroPasarela" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TMovimientoPasarela" EntityType="Self.TMovimientoPasarela" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TTarjetaPasarela" EntityType="Self.TTarjetaPasarela" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__TCuentaAh__CodCl__2C3393D0" Association="Self.FK__TCuentaAh__CodCl__2C3393D0">
+      <End Role="TClientePasarela" EntitySet="TClientePasarela" />
+      <End Role="TCuentaAhorroPasarela" EntitySet="TCuentaAhorroPasarela" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TMovimien__NroTa__76969D2E" Association="Self.FK__TMovimien__NroTa__76969D2E">
+      <End Role="TTarjetaPasarela" EntitySet="TTarjetaPasarela" />
+      <End Role="TMovimientoPasarela" EntitySet="TMovimientoPasarela" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TTarjetaP__NroCu__2F10007B" Association="Self.FK__TTarjetaP__NroCu__2F10007B">
+      <End Role="TCuentaAhorroPasarela" EntitySet="TCuentaAhorroPasarela" />
+      <End Role="TTarjetaPasarela" EntitySet="TTarjetaPasarela" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

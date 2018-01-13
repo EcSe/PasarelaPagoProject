@@ -12,6 +12,5 @@ using System.Text;
 public interface IServicePasarela
 {
     
-    [OperationContract]
-     public  Listar();
+   
 }

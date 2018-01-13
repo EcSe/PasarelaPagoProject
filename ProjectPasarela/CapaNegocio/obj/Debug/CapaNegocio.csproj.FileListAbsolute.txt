@@ -1,0 +1,8 @@
+D:\Proyectos\PasarelaPagoProject\ProjectPasarela\CapaNegocio\bin\Debug\CapaNegocio.dll.config
+D:\Proyectos\PasarelaPagoProject\ProjectPasarela\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\Proyectos\PasarelaPagoProject\ProjectPasarela\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\Proyectos\PasarelaPagoProject\ProjectPasarela\CapaNegocio\bin\Debug\EntityFramework.dll
+D:\Proyectos\PasarelaPagoProject\ProjectPasarela\CapaNegocio\bin\Debug\EntityFramework.xml
+D:\Proyectos\PasarelaPagoProject\ProjectPasarela\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\Proyectos\PasarelaPagoProject\ProjectPasarela\CapaNegocio\obj\Debug\CapaNegocio.pdb
+D:\Proyectos\PasarelaPagoProject\ProjectPasarela\CapaNegocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache

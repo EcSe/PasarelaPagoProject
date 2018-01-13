@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BDEcommerceModelStoreContainer" CdmEntityContainer="BDEcommerceEntities">
+    <EntitySetMapping Name="TClientePasarela">
+      <EntityTypeMapping TypeName="BDEcommerceModel.TClientePasarela">
+        <MappingFragment StoreEntitySet="TClientePasarela">
+          <ScalarProperty Name="CodCliente" ColumnName="CodCliente" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Cuidad" ColumnName="Cuidad" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TCuentaAhorroPasarela">
+      <EntityTypeMapping TypeName="BDEcommerceModel.TCuentaAhorroPasarela">
+        <MappingFragment StoreEntitySet="TCuentaAhorroPasarela">
+          <ScalarProperty Name="NroCuenta" ColumnName="NroCuenta" />
+          <ScalarProperty Name="TipoDeCuenta" ColumnName="TipoDeCuenta" />
+          <ScalarProperty Name="Banco" ColumnName="Banco" />
+          <ScalarProperty Name="CodCliente" ColumnName="CodCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TMovimientoPasarela">
+      <EntityTypeMapping TypeName="BDEcommerceModel.TMovimientoPasarela">
+        <MappingFragment StoreEntitySet="TMovimientoPasarela">
+          <ScalarProperty Name="RegistroMovimiento" ColumnName="RegistroMovimiento" />
+          <ScalarProperty Name="FechaMovimiento" ColumnName="FechaMovimiento" />
+          <ScalarProperty Name="MontoRetiro" ColumnName="MontoRetiro" />
+          <ScalarProperty Name="SaldoDisponible" ColumnName="SaldoDisponible" />
+          <ScalarProperty Name="NroTarjeta" ColumnName="NroTarjeta" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TTarjetaPasarela">
+      <EntityTypeMapping TypeName="BDEcommerceModel.TTarjetaPasarela">
+        <MappingFragment StoreEntitySet="TTarjetaPasarela">
+          <ScalarProperty Name="NroTarjeta" ColumnName="NroTarjeta" />
+          <ScalarProperty Name="TipoTarjeta" ColumnName="TipoTarjeta" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="NroCuenta" ColumnName="NroCuenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
