@@ -8,15 +8,15 @@ namespace CapaNegocio
 {
     public class ClientePBL
     {
-       /* public List<TClientePasarela> Listar()
+        public List<TClientePasarela> Listar()
         {
             using (BDEcommerceEntities comercio = new BDEcommerceEntities())
             {
                 return comercio.TClientePasarela.ToList();
             }
-        }*/
+        }
 
-        public string Agregar(int  CodCliente,string Nombres,string Apellidos,
+      /*  public string Agregar(int  CodCliente,string Nombres,string Apellidos,
             string Ciudad,string Provincia,string Distrito,string Sexo,string Estado,
             string TipoDoc,string Dni)
         {
@@ -47,6 +47,23 @@ namespace CapaNegocio
                 throw;
             }
             return "Se realizo proceso con exito";
+        }*/
+
+        public string Agregar(TClientePasarela cli)
+        {
+            try
+            {
+                using( BDEcommerceEntities comercio = new BDEcommerceEntities())
+                {
+                
+                };
+            }
+            catch (Exception)
+            {   
+                
+                throw;
+            }
+            return "";
         }
 
         public string Actualizar(int CodCliente, string Nombres, string Apellidos,
